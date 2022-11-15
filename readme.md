@@ -8,6 +8,7 @@ Create a `Dockerfile` in your bud project like the following
 ```Dockerfile
 FROM gjrdiesel/bud-docker AS builder
 COPY . /app
+RUN npm install
 RUN go mod download
 RUN bud build
 
